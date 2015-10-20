@@ -1,0 +1,33 @@
+{
+  "name": "humble-auth",
+  "version": "0.0.0",
+  "description": "A hapi authentication strategy using humble-session.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zkochan/humble-auth.git"
+  },
+  "keywords": [
+    "hapi",
+    "auth"
+  ],
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "zoltan.kochan@gmail.com",
+    "url": "http://kochan.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zkochan/humble-auth/issues"
+  },
+  "homepage": "https://github.com/zkochan/humble-auth#readme",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "dependencies": {
+    "boom": "^2.9.0"
+  }
+}
