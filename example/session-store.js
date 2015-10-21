@@ -5,7 +5,7 @@ exports.register = function(server, opts, next) {
     var cache = {};
     return {
       get: function(sid, cb) {
-        return cb(cache[sid] || {});
+        return cb(null, cache[sid] || {});
       },
       set: function(sid, session) {
         cache[sid] = session;
