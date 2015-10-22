@@ -1,9 +1,8 @@
 'use strict';
 var Hapi = require('hapi');
 var hapiVtree = require('hapi-vtree');
-var humbleSession = require('../../humble-session/lib').plugin;
+var humbleSession = require('../../humble-session/lib');
 var humbleAuth = require('../lib');
-var sessionStore = require('./session-store');
 var h = require('virtual-dom/h');
 
 var server = new Hapi.Server();
@@ -11,13 +10,13 @@ var server = new Hapi.Server();
 server.connection({ port: '6444' });
 
 server.register([{
-    register: sessionStore
+    register: require('simple-session-store')
   }, {
     register: humbleSession,
     options: {
       password: 'some-pass',
       isSecure: false,
-      sessionStoreName: 'session-store'
+      sessionStoreName: 'simple-session-store'
     }
   }, {
     register: humbleAuth
@@ -55,8 +54,9 @@ server.register([{
           user: {
             name: 'John'
           }
+        }, function(err) {
+          reply.redirect('/private');
         });
-        reply.redirect('/private');
       }
     }
   });
