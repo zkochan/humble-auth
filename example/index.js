@@ -28,7 +28,7 @@ server.register([{
     return;
   }
 
-  server.auth.strategy('simple', 'session');
+  server.auth.strategy('default', 'session');
 
   server.route({
     method: 'GET',
@@ -65,7 +65,7 @@ server.register([{
     method: 'GET',
     path: '/private',
     config: {
-      auth: 'simple',
+      auth: 'default',
       handler: function(req, reply) {
         reply.vtree(h('div', [
           h('div', 'Hey, this is a private page'),
