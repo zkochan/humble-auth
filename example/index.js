@@ -1,7 +1,7 @@
 'use strict';
 var Hapi = require('hapi');
 var hapiVtree = require('hapi-vtree');
-var humbleSession = require('../../humble-session/lib');
+var humbleSession = require('humble-session');
 var humbleAuth = require('../lib');
 var h = require('virtual-dom/h');
 
