@@ -1,6 +1,6 @@
 # humble-auth
 
-A hapi authentication strategy using humble-session.
+A [hapi](http://hapijs.com/) authentication strategy using [humble-session](https://github.com/zkochan/humble-session).
 
 [![Dependency Status](https://david-dm.org/zkochan/humble-auth/status.svg?style=flat)](https://david-dm.org/zkochan/humble-auth)
 [![Build Status](https://travis-ci.org/zkochan/humble-auth.svg?branch=master)](https://travis-ci.org/zkochan/humble-auth)
@@ -10,7 +10,7 @@ A hapi authentication strategy using humble-session.
 ## Installation
 
 ```
-npm i --save hapi-auth
+npm i --save humble-auth
 ```
 
 
