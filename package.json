@@ -12,7 +12,12 @@
   },
   "keywords": [
     "hapi",
-    "auth"
+    "auth",
+    "authentication",
+    "login",
+    "log-in",
+    "signin",
+    "sign-in"
   ],
   "author": {
     "name": "Zoltan Kochan",

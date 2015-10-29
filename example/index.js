@@ -50,10 +50,8 @@ server.register([{
     path: '/',
     config: {
       handler: function(req, reply) {
-        reply.setSession({
-          user: {
-            name: 'John'
-          }
+        reply.login({
+          name: 'John'
         }, function(err) {
           reply.redirect('/private');
         });

@@ -51,7 +51,7 @@ describe('humble-auth', function() {
             strategies: ['default']
           },
           handler: function(request, reply) {
-            reply.setSession({ user: request.params.user }, function(err) {
+            reply.login(request.params.user, function(err) {
               expect(err).to.not.exist;
               return reply(request.params.user);
             });
